@@ -1,5 +1,6 @@
 import React from "react";
 import QuoteCard from "./QuoteCard";
+import { addQuote, removeQuote, upvoteQuote, downvoteQuote } from './quotesSlice'
 
 function Quotes() {
   return (
@@ -17,6 +18,13 @@ function Quotes() {
 
               Render Quotes With QuoteCard component and pass down callback props for removing, upvoting and downvoting quotes
               */}
+            
+              {<QuoteCard 
+                addQuote={addQuote}
+                removeQuote={removeQuote}
+                upvoteQuote={upvoteQuote}
+                downvoteQuote={downvoteQuote}
+              />}
           </div>
         </div>
       </div>
