@@ -38,23 +38,24 @@ export default function quotesReducer(state = initialState, action) {
       return (
         [...state, action.payload]
       )
+
     case ('quotes/remove'):
       return (
         state.filter(x => x.id !== action.payload)
       )
+      
     case ('quotes/upvote'):
       let target = state.find(quote => quote.id === action.payload)
-
       target.votes = target.votes + 1
-
       return [target]
+
     case ('quotes/downvote'):
       let targetDown = state.find(quote => quote.id === action.payload)
       if(targetDown.votes > 0) {
         targetDown.votes = targetDown.votes - 1
       } 
-
       return [targetDown]
+
     default:
       return state
   }
