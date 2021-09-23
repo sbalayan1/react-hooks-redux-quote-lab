@@ -21,17 +21,19 @@ function Quotes() {
 
               Render Quotes With QuoteCard component and pass down callback props for removing, upvoting and downvoting quotes
               */}
-              {
-                <QuoteCard 
-                  quotes = {quotes}
-                  addQuote = {addQuote}
-                  removeQuote = {removeQuote}
-                  downvoteQuote = {downvoteQuote}
-                  upvoteQuote = {upvoteQuote}
-                />
-              }
-            
+              {quotes.map(quote => {
+                return (
+                  <QuoteCard 
+                    quote = {quote}
+                    addQuote = {addQuote}
+                    removeQuote = {removeQuote}
+                    downvoteQuote = {downvoteQuote}
+                    upvoteQuote = {upvoteQuote}
+                  />
+                )
+              })}
 
+      
           </div>
         </div>
       </div>
