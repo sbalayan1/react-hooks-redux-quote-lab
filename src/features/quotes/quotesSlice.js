@@ -41,7 +41,7 @@ export default function quotesReducer(state = initialState, action) {
 
     case ('quotes/remove'):
       return (
-        state.filter(x => x.id !== action.payload)
+        state.filter(quote => quote.id !== action.payload)
       )
       
     case ('quotes/upvote'):

@@ -7,7 +7,8 @@ function QuoteForm() {
   const [formData, setFormData] = useState({
     id: uuid(),
     content: "",
-    author: ""
+    author: "", 
+    votes: 0
   });
 
   const dispatch = useDispatch()
