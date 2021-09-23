@@ -20,34 +20,6 @@ function QuoteForm() {
     })
   }
 
-  let str = "<div>word</div>"
-
-  function StringChallenge(str) {
-    let stringArray = str.split('')
-    let updatedArray = []
-    let j = 0 
-
-    for (let i = 0; i < stringArray.length; i++) { 
-
-      if (stringArray[i] === '<') {
-        j = i
-        i++
-      } else if (stringArray[i] === '>') {
-        let word = stringArray.slice(j,i+1)
-        updatedArray.push(word.join(''))
-        i++
-
-      } else {
-        i++
-      }
-    }
-
-    return updatedArray
-
-  }
-
-  console.log(StringChallenge(str))
-
 
   function handleSubmit(event) {
     // Handle Form Submit event default
